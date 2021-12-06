@@ -1,0 +1,28 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" href="order_sheet.css">
+    <title>Thymeleaf Starter</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<form action="heart-rate-zones" method=POST></form>
+    <table>
+        <thead>
+        <tr>
+            <th>Zone Number&emsp;</th>
+            <th>Minimal heart rate for this zone&emsp;</th>
+            <th>Maximal heart rate for this zone&emsp;</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="HeartRateZone, it_stat:${zones}" th:class="${it_stat.first} ? 'first' : (${it_stat.even} ? 'even' : 'odd')">
+            <td th:text="${it_stat.count}"></td>
+            <td th:text="${HeartRateZone.min}">_year_</td>
+            <td th:text="${HeartRateZone.max}">_rating_</td>
+        </tr>
+
+</tbody>
+    </table>
+</body>
+</html>

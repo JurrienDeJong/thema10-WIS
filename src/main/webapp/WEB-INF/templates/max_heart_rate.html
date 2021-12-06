@@ -1,0 +1,12 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Thymeleaf Starter</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<form action="heart-rate-zones" method="POST">
+    <input id="max heart rate field" type=text style='width:20em' name="max_heart_rate" min=25 max=500 th:value="${max_heart_rate}" value="_offline_"/>
+</form>
+</body>
+</html>
